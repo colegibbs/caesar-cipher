@@ -19,6 +19,6 @@ def encrypt(text, shift):
       encrypted_text += letter
   return encrypted_text
 
-  def decrypt(encrypted_text, key):
-    encrypt(encrypted_text, -key)
+def decrypt(encrypted_text, key):
+  return encrypt(encrypted_text, -(key + 1))
 
