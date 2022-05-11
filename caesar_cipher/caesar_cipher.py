@@ -2,7 +2,6 @@
 
 def encrypt(text, shift):
   shift = shift % 27
-  # words = text.split()
   encrypted_text = ""
   for letter in text:
     if letter.isalpha():
@@ -18,12 +17,8 @@ def encrypt(text, shift):
       encrypted_text += encrypted_char
     else:
       encrypted_text += letter
-  # for word in words:
-  #   for letter in word:
-  #     if letter.isalpha():
-  #       char_num = ord(letter)
-  #       encrypted_char = chr(char_num + shift)
-  #       encrypted_text += encrypted_char
-  #     else:
-  #       encrypted_text += letter
   return encrypted_text
+
+def decrypt(encrypted_text, key):
+  return encrypt(encrypted_text, -(key + 1))
+
