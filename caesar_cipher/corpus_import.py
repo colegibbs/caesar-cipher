@@ -5,5 +5,5 @@ nltk.download('names', quiet=True)
 
 from nltk.corpus import words, names
 
-word_list = word.words()
-name_list = name.words()
+word_list = words.words()
+name_list = names.words()
