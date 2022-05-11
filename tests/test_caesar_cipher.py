@@ -25,3 +25,8 @@ def test_encrypt_with_sentence():
   actual = encrypt('This is my message.', 5)
   expected = 'Ymnx nx rd rjxxflj.'
   assert actual == expected
+
+def test_encrypt_with_micro_Z():
+  actual = encrypt('Z', 2)
+  expected = 'B'
+  assert actual == expected
