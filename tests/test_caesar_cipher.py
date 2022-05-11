@@ -109,3 +109,9 @@ def test_crack_with_large_shift():
   actual = crack('oguucig')
   expected = 'message'
   assert actual == expected
+
+def test_required_crack():
+  encrypted = encrypt("It was the best of times, it was the worst of times.", 6)
+  actual = crack(encrypted)
+  expected = "It was the best of times, it was the worst of times."
+  assert actual == expected
